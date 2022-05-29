@@ -15,8 +15,8 @@ export function MovieHero({ featuredMovie, getGenreById }: MovieHeroProps) {
         objectFit="cover"
         alt=""
       />
-      <div className="absolute inset-0 bg-black/40 flex items-center px-20">
-        <div className="max-w-md">
+      <div className="absolute inset-0 bg-black/40 flex items-center px-10 md:px-20">
+        <div className="md:max-w-md">
           <h2 className="font-bold text-4xl mb-2">{featuredMovie?.title}</h2>
           <p className="line-clamp-2">{featuredMovie?.overview}</p>
           <p className="my-2 font-semibold">
@@ -27,9 +27,14 @@ export function MovieHero({ featuredMovie, getGenreById }: MovieHeroProps) {
                 .join(', ')}
             </span>
           </p>
-          <button className="px-4 py-2 mt-4 max-w-max self-end bg-crimson-200 hover:bg-crimson-300 rounded-sm uppercase font-semibold">
-            Reserve tickets now!
-          </button>
+          <div className="flex gap-2 items-center mt-2">
+            <button className="text-sm md:text-base px-4 py-2 max-w-max self-end bg-crimson-200 hover:bg-crimson-300 rounded-sm font-semibold">
+              Reserve Tickets
+            </button>
+            <p className="px-4 py-2 text-sm ring-1 ring-inset ring-white rounded-sm">
+              Watch Trailer
+            </p>
+          </div>
         </div>
       </div>
     </div>
